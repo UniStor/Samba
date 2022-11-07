@@ -1,0 +1,17 @@
+[local]
+localhost
+
+[local:vars]
+ansible_connection=local
+ansible_user=me
+ansible_become_password=u
+
+[test]
+192.168.122.125
+
+[test:vars]
+ansible_user=me
+ansible_become_password=u
+
+[node:children]
+test

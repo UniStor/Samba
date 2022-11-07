@@ -1,0 +1,12 @@
+---
+
+- name: Enable samba
+  become: true
+  ansible.builtin.systemd:
+    name: smb
+    enabled: yes
+    state: started
+
+- name: Reload Firewall.Fedora
+  become: true
+  ansible.builtin.command: firewall-cmd --reload

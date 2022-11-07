@@ -1,0 +1,19 @@
+---
+- name: install samba
+  ansible.builtin.dnf:
+    name:
+      - samba
+    state: latest
+  become: true
+  notify: Enable samba
+
+
+- name: configure Firewall
+  become: true
+  ansible.posix.firewalld:
+    zone: FedoraWorkstation
+    service: samba
+    permanent: yes
+    state: enabled
+  notify: Reload Firewall.Fedora
+# https://docs.fedoraproject.org/en-US/quick-docs/samba/
