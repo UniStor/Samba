@@ -4,4 +4,5 @@
     somevar: "value"
 
   roles:
-  - samba server
+  - Samba server
+  - share folder
