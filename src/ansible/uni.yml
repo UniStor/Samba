@@ -6,4 +6,4 @@
 
   roles:
   - Samba server
-  - share folder
+  # - share folder
