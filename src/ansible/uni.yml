@@ -1,0 +1,9 @@
+- name: Samba File Share
+  hosts: test #, localhost, node
+  vars:
+    ansible_become_password: u
+    optional_packages: true
+
+  roles:
+  - Samba server
+  - share folder

@@ -1,8 +1,0 @@
----
-- hosts: node #local
-  vars:
-    somevar: "value"
-
-  roles:
-  - Samba server
-  - share folder
